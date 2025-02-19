@@ -72,16 +72,19 @@ body {
 }
 
 @layer utilities {
-  .gradient {
+  .red-gradient {
     @apply bg-gradient-to-br from-fuchsia-600 via-pink-600 to-rose-700;
   }
 
-  .free-trial-gradient {
-    @apply bg-gradient-to-br from-blue-700 via-sky-600 to-cyan-500;
+  .blue-gradient {
+    @apply bg-gradient-to-br from-blue-700 via-sky-500 to-cyan-500;
   }
 
-  .gradient-title {
-    @apply gradient font-extrabold tracking-tighter pr-2 pb-2 text-transparent bg-clip-text;
+  .red-gradient-title {
+    @apply red-gradient font-extrabold tracking-tighter pr-2 pb-2 text-transparent bg-clip-text;
+  }
+  .blue-gradient-title {
+    @apply blue-gradient font-extrabold tracking-tighter pr-2 pb-2 text-transparent bg-clip-text;
   }
 }
 
