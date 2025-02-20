@@ -1,10 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Drawer,
   DrawerClose,
   DrawerContent,
+  DrawerDescription,
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
@@ -22,8 +23,12 @@ import {
 } from "./ui/select";
 import { Switch } from "./ui/switch";
 import { Button } from "./ui/button";
+import useFetch from "@/hooks/use-fetch";
+import { createAccount } from "@/actions/dashboard";
+import { Loader2 } from "lucide-react";
+import { toast } from "sonner";
 
-const CreateAccountDrawer = ({ children }) => {
+export function CreateAccountDrawer({ children }) {
   const [open, setOpen] = useState(false);
 
   const {
@@ -43,8 +48,29 @@ const CreateAccountDrawer = ({ children }) => {
     },
   });
 
+  const {
+    data: newAccount,
+    error,
+    fn: createAccountFn,
+    loading: createAccountLoading,
+  } = useFetch(createAccount);
+
+  useEffect(() => {
+    if (newAccount && !createAccountLoading) {
+      toast.success("Account created successfully");
+      reset();
+      setOpen(false);
+    }
+  }, [createAccountLoading, newAccount]);
+
+  useEffect(() => {
+    if (error) {
+      toast.error(error.message || "Failed to create account");
+    }
+  }, [error]);
+
   const onSubmit = async (data) => {
-    console.log(data);
+    await createAccountFn(data);
   };
 
   return (
@@ -53,6 +79,9 @@ const CreateAccountDrawer = ({ children }) => {
       <DrawerContent>
         <DrawerHeader>
           <DrawerTitle>Create New Account</DrawerTitle>
+          <DrawerDescription>
+            Fill in the details to create a new account.
+          </DrawerDescription>
         </DrawerHeader>
         <div className='px-4 pb-4'>
           <form className='space-y-4' onSubmit={handleSubmit(onSubmit)}>
@@ -98,7 +127,7 @@ const CreateAccountDrawer = ({ children }) => {
                 type='number'
                 step='0.01'
                 placeholder='0.00'
-                {...register("name")}
+                {...register("balance")}
               />
               {errors.balance && (
                 <p className='text-sm text-red-500'>{errors.balance.message}</p>
@@ -130,8 +159,19 @@ const CreateAccountDrawer = ({ children }) => {
                 </Button>
               </DrawerClose>
 
-              <Button type='submit' className='flex-1'>
-                Create Account
+              <Button
+                type='submit'
+                className='flex-1'
+                disabled={createAccountLoading}
+              >
+                {createAccountLoading ? (
+                  <>
+                    <Loader2 className='mr-2 h-4 w-4 animate-spin' />
+                    Creating...
+                  </>
+                ) : (
+                  "Create Account"
+                )}
               </Button>
             </div>
           </form>
@@ -139,6 +179,4 @@ const CreateAccountDrawer = ({ children }) => {
       </DrawerContent>
     </Drawer>
   );
-};
-
-export default CreateAccountDrawer;
+}

@@ -17,6 +17,8 @@ const Header = async () => {
             height='30'
             width='100'
             className='h-13 w-30 object-contain'
+            priority
+            style={{ width: "auto", height: "auto" }}
           />
         </Link>
 
