@@ -59,12 +59,38 @@ export async function createAccount(data) {
       },
     });
     // Nextjs doesn't support decimal values, so serialize decimal balance to integer balance before passing to nextjs using serializeTransactions()
-    const serializeAccount = serializeTransaction(account);
+    const serializedAccount = serializeTransaction(account);
 
     revalidatePath("/dashboard");
 
-    return { success: true, data: serializeAccount };
+    return { success: true, data: serializedAccount };
   } catch (error) {
     throw new Error(error.message);
   }
+}
+
+export async function getUserAccounts() {
+  const { userId } = await auth();
+  if (!userId) throw new Error("Unauthorized");
+
+  const user = await db.user.findUnique({
+    where: { clerkUserId: userId },
+  });
+
+  if (!user) {
+    throw new Error("User not found");
+  }
+  const accounts = await db.account.findMany({
+    where: { userId: user.id },
+    orderBy: { createdAt: "desc" },
+    include: {
+      _count: {
+        select: {
+          transactions: true,
+        },
+      },
+    },
+  });
+  const serializedAccount = accounts.map(serializeTransaction);
+  return serializedAccount;
 }
