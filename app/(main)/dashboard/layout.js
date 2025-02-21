@@ -5,7 +5,11 @@ import { BarLoader } from "react-spinners";
 const Dashboard = () => {
   return (
     <div className='px-5'>
-      <h1 className='text-6xl font-bold blue-gradient-title mb-5'>Dashboard</h1>
+      <div className='flex items-center justify-between mb-5'>
+        <h1 className='text-6xl mt-7 font-bold blue-gradient-title tracking-tight'>
+          Dashboard
+        </h1>
+      </div>
 
       {/* Dashboard Page */}
       <Suspense
