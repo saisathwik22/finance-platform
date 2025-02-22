@@ -80,11 +80,18 @@ body {
     @apply bg-gradient-to-br from-blue-700 via-sky-500 to-cyan-500;
   }
 
+  .purple-gradient {
+    @apply bg-gradient-to-br from-blue-600 to-purple-600;
+  }
+
   .red-gradient-title {
     @apply red-gradient font-extrabold tracking-tighter pr-2 pb-2 text-transparent bg-clip-text;
   }
   .blue-gradient-title {
     @apply blue-gradient font-extrabold tracking-tighter pr-2 pb-2 text-transparent bg-clip-text;
+  }
+  .purple-gradient-title {
+    @apply purple-gradient font-extrabold tracking-tighter pr-2 pb-2 text-transparent bg-clip-text;
   }
 }
 
