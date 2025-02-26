@@ -98,7 +98,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='py-20 blue-gradient'>
+      <section className='py-20 purple-gradient'>
         <div className='container mx-auto px-4 text-center'>
           <h2 className=' text-white text-3xl font-bold text-center mb-4'>
             Ready to Take Control of Your Finances?
@@ -110,7 +110,7 @@ export default function Home() {
           <Link href='/dashboad'>
             <Button
               size='lg'
-              className='bg-white text-blue-600 hover:bg-sky-50 animate-bounce'
+              className='bg-white text-blue-700 font-bold hover:bg-sky-50 animate-bounce'
             >
               Start Free Trial
             </Button>

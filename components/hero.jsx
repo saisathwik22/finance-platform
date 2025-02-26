@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Button } from "./ui/button";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
+import { StarsIcon } from "lucide-react";
 
 const HeroSection = () => {
   const imageRef = useRef();
@@ -33,16 +34,18 @@ const HeroSection = () => {
           Manage Your Money
           <br /> with Intelligence
         </h1>
-        <p className='text-xl text-gray-600 mb-8 max-w-2xl mx-auto'>
+        <p className='text-xl text-gray-500 mb-8 max-w-2xl mx-auto my-1 font-bold '>
           An AI-driven financial management platform that helps you track,
           analyze, and optimize your spending with real-time insights
         </p>
+
         <div className='flex justify-center space-x-4'>
           <Link href='/dashboard'>
             <Button size='lg'>Get Started</Button>
           </Link>
           <Link href='https://github.com/saisathwik22/finance-platform'>
-            <Button size='lg' variant='outline'>
+            <Button size='lg' variant='outline' className='font-semibold'>
+              <StarsIcon />
               Github
             </Button>
           </Link>

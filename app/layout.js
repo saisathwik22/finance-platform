@@ -23,9 +23,10 @@ export default function RootLayout({ children }) {
           {/* Footer */}
           <footer className='bg-blue-50 py-12'>
             <div className='container mx-auto px-4 text-center text-gray-600'>
-              <p>
+              <p className='font-semibold'>
                 Developed as a learning experiment, each line of code reflects
-                my growth! 🚀
+                my growth! 🚀 <br />
+                Refer Github repository to know more about project.
               </p>
             </div>
           </footer>
