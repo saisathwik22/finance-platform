@@ -15,7 +15,7 @@ import { toast } from "sonner";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
-const AccountCard = ({ account }) => {
+export function AccountCard({ account }) {
   const { name, type, balance, id, isDefault } = account;
 
   const {
@@ -84,6 +84,4 @@ const AccountCard = ({ account }) => {
       </Link>
     </Card>
   );
-};
-
-export default AccountCard;
+}
