@@ -15,7 +15,7 @@ const Header = async () => {
             src={"/logo.png"}
             alt='fund flow logo'
             height='30'
-            width='100'
+            width='90'
             className='h-13 w-30 object-contain'
             priority
             style={{ width: "auto", height: "auto" }}
