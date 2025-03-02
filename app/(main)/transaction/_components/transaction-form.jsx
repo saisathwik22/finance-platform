@@ -82,9 +82,12 @@ const AddTransactionForm = ({ accounts, categories }) => {
     }
   }, [transactionResult, transactionLoading]);
 
+  const handleScanComplete = () => {};
+
   return (
     <form className='space-y-6' onSubmit={handleSubmit(onSubmit)}>
       {/* AI receipt scanner */}
+      <ReciptScanner onScanComplete={handleScanComplete} />
 
       <div className='space-y-2'>
         <label className='text-sm font-medium'>Type</label>
