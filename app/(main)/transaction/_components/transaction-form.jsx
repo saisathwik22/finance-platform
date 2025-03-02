@@ -28,6 +28,7 @@ import { Calendar } from "@/components/ui/calendar";
 import { Switch } from "@/components/ui/switch";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
+import ReciptScanner from "./recipt-scanner";
 
 const AddTransactionForm = ({ accounts, categories }) => {
   const router = useRouter();
@@ -82,7 +83,7 @@ const AddTransactionForm = ({ accounts, categories }) => {
     }
   }, [transactionResult, transactionLoading]);
 
-  const handleScanComplete = () => {};
+  const handleScanComplete = (scannedData) => {};
 
   return (
     <form className='space-y-6' onSubmit={handleSubmit(onSubmit)}>
