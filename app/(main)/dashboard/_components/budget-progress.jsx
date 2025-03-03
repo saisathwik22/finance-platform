@@ -17,8 +17,6 @@ import React, { useEffect, useState } from "react";
 import { toast } from "sonner";
 
 export function BudgetProgress({ initialBudget, currentExpenses }) {
-  console.log("Initial Budget:", initialBudget);
-  console.log("Current Expenses:", currentExpenses);
   const [isEditing, setIsEditing] = useState(false);
   const [newBudget, setNewBudget] = useState(
     initialBudget?.amount?.toString() || ""
@@ -124,8 +122,8 @@ export function BudgetProgress({ initialBudget, currentExpenses }) {
                 percentUsed >= 90
                   ? "bg-red-500"
                   : percentUsed >= 75
-                  ? "bg-yellow-500"
-                  : "bg-green-500"
+                    ? "bg-yellow-500"
+                    : "bg-green-500"
               }`}
             />
             <p className='text-xs text-muted-foreground text-right'>

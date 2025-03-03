@@ -13,7 +13,7 @@ import useFetch from "@/hooks/use-fetch";
 import { ArrowDownRight, ArrowUpRight } from "lucide-react";
 import { toast } from "sonner";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 
 export function AccountCard({ account }) {
   const { name, type, balance, id, isDefault } = account;
@@ -65,7 +65,9 @@ export function AccountCard({ account }) {
       <Link href={`/account/${id}`}>
         <CardContent>
           <div className='text-2xl font-bold'>
-            ₹{parseFloat(balance).toFixed(2)}
+            {balance < 0
+              ? `₹${parseFloat(-balance).toFixed(2)}`
+              : `₹${parseFloat(balance).toFixed(2)}`}
           </div>
           <p className='text-xs text-muted-foreground '>
             {type.charAt(0) + type.slice(1).toLowerCase()} Account
