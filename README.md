@@ -1,3 +1,7 @@
+
+email - reddysaisathwik022@gmail.com
+password - dummyadmin25
+
 [FundFlow-DB-design-URL](https://app.eraser.io/workspace/iNJMULESeFP7iTB1C7Br?origin=share)
 
 ![FundFlow-DBdesign](https://github.com/user-attachments/assets/288b6ade-badc-4d3e-b76e-ff076b58bbce)
