@@ -78,8 +78,8 @@ Below is the **database schema** used for Fund Flow.
 
 ## 📸 Screenshots  
 
-_(Add images of the dashboard, transaction table, and charts to showcase the UI.)_  
-(![Screenshot (69)](https://github.com/user-attachments/assets/8acf592f-907c-4142-b583-229df8bb73f9)) 
+
+![Screenshot (69)](https://github.com/user-attachments/assets/8acf592f-907c-4142-b583-229df8bb73f9)
 ![Screenshot (70)](https://github.com/user-attachments/assets/a14626fa-e899-4426-9a50-fef8666f4b0f)
 ![Screenshot (71)](https://github.com/user-attachments/assets/f0ec2c78-7383-4a7f-9de2-da5f4bee0e17)
 ![Screenshot (72)](https://github.com/user-attachments/assets/3bc70245-367c-435c-9619-b5ced4169a7d)
