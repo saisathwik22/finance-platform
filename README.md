@@ -1,4 +1,4 @@
-# 🌊 Fund Flow 💰  
+# 🤖 Fund Flow 🤑
 
 **A powerful personal finance tracker to manage transactions, budgets, and insights with AI-powered receipt scanning & automated reports.**  
 
@@ -73,7 +73,7 @@ Below is the **database schema** used for Fund Flow.
 🔗 **[Visit Fund Flow](https://finance-platform-ten.vercel.app/)** 
 
 🔑 **Test Credentials:**  
-- **Email**: `reddysaisathwik022@gmail.com`  
+- **Username**: `admin`  
 - **Password**: `dummyadmin25`  
 
 ## 📸 Screenshots  
