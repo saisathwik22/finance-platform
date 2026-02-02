@@ -70,19 +70,20 @@ Below is the **database schema** used for Fund Flow.
 
 ## 🚀 Live Demo  
 
-🔗 **[Visit Fund Flow](https://finance-platform-ten.vercel.app/)** 
+🔗 **[Link 1](fund-flow-topaz.vercel.app)** 
+🔗 **[Link 2](fund-flow-git-main-sathwiks-projects-8fe7e3d4.vercel.app)** 
+🔗 **[Link 3](fund-flow-b2en2cjlq-sathwiks-projects-8fe7e3d4.vercel.app)** 
 
 🔑 **Test Credentials:**  
 - **Username**: `admin`  
-- **Password**: `dummyadmin25`  
+- **Password**: `testaccount2025`  
 
 ## 📸 Screenshots  
 
 
-![Screenshot (69)](https://github.com/user-attachments/assets/8acf592f-907c-4142-b583-229df8bb73f9)
-![Screenshot (70)](https://github.com/user-attachments/assets/a14626fa-e899-4426-9a50-fef8666f4b0f)
-![Screenshot (71)](https://github.com/user-attachments/assets/f0ec2c78-7383-4a7f-9de2-da5f4bee0e17)
-![Screenshot (72)](https://github.com/user-attachments/assets/3bc70245-367c-435c-9619-b5ced4169a7d)
+<img width="1920" height="1120" alt="Screenshot 2026-02-02 144135" src="https://github.com/user-attachments/assets/bce1a5e5-97ad-4a35-9100-fe0066563bcf" />
+<img width="1916" height="1128" alt="Screenshot 2026-02-02 144052" src="https://github.com/user-attachments/assets/43cb1a2a-b0b5-4851-b760-017ac7ef99b7" />
+<img width="1896" height="1121" alt="Screenshot 2026-02-02 144012" src="https://github.com/user-attachments/assets/2c5017f5-5c0d-4b9e-98de-f7f10cff29c6" />
 
 
 
