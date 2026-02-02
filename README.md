@@ -69,10 +69,7 @@ Below is the **database schema** used for Fund Flow.
 - **Deployment**: Vercel (Integrated with Inngest)  
 
 ## 🚀 Live Demo  
-
-🔗 **[Link 1](fund-flow-topaz.vercel.app)** 
-🔗 **[Link 2](fund-flow-git-main-sathwiks-projects-8fe7e3d4.vercel.app)** 
-🔗 **[Link 3](fund-flow-b2en2cjlq-sathwiks-projects-8fe7e3d4.vercel.app)** 
+https://fund-flow-topaz.vercel.app/
 
 🔑 **Test Credentials:**  
 - **Username**: `admin`  
